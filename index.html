@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock, Paper, Scissors</title>
+  <link rel="icon" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+
+<body class="preload">
+
+  <div class="container">
+    <header>
+      <img class="logo_img" src="images/logo.svg" alt="logo">
+      <div class="score-wrapper">
+        <div class="score-container">
+          <h4>Player</h4>
+          <p id="player_score">0</p>
+        </div>
+        <div class="score-container">
+          <h4>Computer</h4>
+          <p id="computer_score">0</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <button class="btn-circle btn-paper pick" type="button" name="button" data-choice="paper">
+        <span class="wrapper">
+          <img src="images/icon-paper.svg" alt="paper icon">
+        </span>
+      </button>
+
+      <button class="btn-circle btn-scissors pick" type="button" name="button" data-choice="scissors">
+        <span class="wrapper">
+          <img src="images/icon-scissors.svg" alt="scissors icon">
+        </span>
+      </button>
+
+      <button class="btn-circle btn-rock pick" type="button" name="button" data-choice="rock">
+        <span class="wrapper">
+          <img src="images/icon-rock.svg" alt="rock icon">
+        </span>
+      </button>
+    </main>
+
+    <button class="btn-rules" tabindex="1"><i class="fa fa-file-text" aria-hidden="true"></i> RULES</button>
+    <div class="modal">
+      <div class="modal_container">
+
+        <header class="modal_header">
+          <h2 class="modal_heading">Rules</h2>
+          <button class="btn-close">
+            <img src="./images/icon-close.svg" alt="Close Button" />
+          </button>
+        </header> 
+
+        <img
+          src="./images/image-rules.svg"
+          alt="Rules Image"
+          class="rules-img"
+        />
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="selection" id="selection">
+    <div class="player_choice">
+      <h2>You picked</h2>
+      <button class="btn-circle btn-paper" id="player_select" type="button" name="button">
+        <span class="wrapper">
+          <img src="images/icon-paper.svg" alt="paper icon">
+        </span>
+      </button>
+    </div>
+
+    <div class="result_text">
+      <h1><span id="win"></span></h1>
+      <button class="btn-reset" id="reset" type="button" name="button">Play again</button>
+    </div>
+
+    <div class="computer_choice">
+      <h2>The house picked</h2>
+      <button class="btn-circle btn-rock" id="computer_select" type="button" name="button">
+        <span class="wrapper">
+          <img src="images/icon-rock.svg" alt="rock icon">
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="attribution">
+      Developed by Manola Pillay
+  </div>
+
+  <script src="https://kit.fontawesome.com/2c6133bcaa.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
